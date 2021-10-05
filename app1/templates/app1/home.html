@@ -1,0 +1,393 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            overflow:hiddern;
+            font-family:"Lato",sans-serif;
+        }
+        .navbar{
+            text-transform:uppercase;
+            font-size:14px;
+            font-weight:700px;
+            letter-spacing:0.2rem;
+            background:rgb(117, 108, 108) !important;
+            padding:30px 0;
+        }
+        .navbar .navbar-nav .nav-item .nav-link{
+            color:white;
+            padding-left:20px;
+            
+        }
+      
+        .navbar .navbar-nav .nav-item .nav-link:hover{
+            color:cyan;
+
+        }
+        .heading-content{
+            position:absolute;
+            top:25%;
+            width:100%;
+            max-width:100%;
+            color:black;
+
+        }
+        .heading-content p{
+            margin-right:850px;
+        }
+        .heading-content .text-1{
+            font-size:30px;
+            margin-bottom:5px;
+            font-weight:500;
+        }
+        .heading-content .text-2{
+            font-size:70px;
+            font-weight:600;
+        }
+
+        .heading-content .text-3{
+            font-size:40px;
+            margin-top:5px;
+            font-weight:500;
+        }
+        .heading-content .text-3 span{
+            color:cyan;
+        }
+        #about .btn{
+            border:2px solid transparent;
+            width:40%;
+            padding:15px 22px;
+            background:#000;
+            border-radius:5px;
+            margin-top:10px;
+        }
+        #about .btn:hover{
+            border:2px solid cyan;
+            cursor: pointer;
+        }
+        #about .btn span{
+            color:#fff;
+            font-size:1em;
+            font-weight:bold;
+            text-transform: uppercase;
+        }
+        .sec-1{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            text-align:center;
+            align-items:center;
+            background:#f8fafb;
+        }
+        .sec-1 .h2{
+            font-family:"Poppins", sans-serif;
+            font-weight:bold;
+            letter-spacing:3px;
+            line-height:50px;
+        }
+        #projects .post-heading .text1{
+            font-family:"Poppins", sans-serif;
+        }
+        .offset:before{
+            display:block;
+            content:"";
+            height:5rem;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+
+</head>
+<body data-spy = "scroll" data-target = "#navbarResponsive">
+    <div id = "home">
+        <nav class="navbar navbar-expand-lg  navbar-dark fixed-top">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+                  
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+    </div>
+      <div class = "container-fluid">
+          <img src = "{%static 'app1/images/R.png'%}" class = "img-fluid">
+          <div class = "heading-content text-center">
+              <p class = "text-1">Hello, I'm</p>
+              <p class = "text-2">Samantak Baisya</p>
+              <p class = "text-3">And I am a <span>freelancer</span></p>
+           </div>
+        </div>
+        <div id = "about" class = "offset container">
+            <div class = "post-heading text-center">
+                <p class = "text1 display-4 fw-bold">About me</p>
+                <hr class = "w-50 mx-auto">
+            </div>
+            <div class = "row">
+                <div class = "col-12 col-lg-6 col-md-12">
+                    <img src = "{% static 'app1/images/@.jpg' %}" class = "img-fluid">
+                </div>
+                <div class = "col-12 col-lg-6 col-md-12">
+                    <p class = "h3 fw-bold mt-2">Want to know me?</p>
+                    <hr>
+                    <p class = "h4">I will write many things about it ok
+                        bor get some help man get lost bor et some 
+
+                    </p>
+                    <a href = "#" class = "btn  w-50 my-4"><span>Know more</span></a>
+                </div>
+            </div>
+        </div>
+        <div id = "projects" class = "offset container my-4">
+            <div class = "post-heading text-center">
+                <p class = "text1 display-4 fw-bold">Projects</p>
+                <hr class = "w-50 mx-auto">
+            </div>
+            <div class = "row">
+                <div class = "col-lg-4 col-md-6 col-12 my-2">
+                    <div class="card mx-auto" style="width: 22rem;">
+                        <img src="{% static 'app1/images/R.png'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ecommerce Website</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-warning text-white">Live Preview</a>
+                        </div>
+                      </div>
+                </div>
+                <div class = "col-lg-4 col-md-6 col-12 my-2">
+                    <div class="card mx-auto" style="width: 22rem;">
+                        <img src="{% static 'app1/images/R.png'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ecommerce Website</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-warning text-white">Live Preview</a>
+                        </div>
+                      </div>
+                </div>
+                <div class = "col-lg-4 col-md-6 col-12 my-2">
+                    <div class="card mx-auto" style="width: 22rem;">
+                        <img src="{% static 'app1/images/R.png'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ecommerce Website</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-warning text-white">Live Preview</a>
+                        </div>
+                      </div>
+                </div>
+                <div class = "col-lg-4 col-md-6 col-12 my-2">
+                    <div class="card mx-auto" style="width: 22rem;">
+                        <img src="{% static 'app1/images/R.png'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ecommerce Website</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-warning text-white">Live Preview</a>
+                        </div>
+                      </div>
+                </div>
+                <div class = "col-lg-4 col-md-6 col-12 my-2">
+                    <div class="card mx-auto" style="width: 22rem;">
+                        <img src="{% static 'app1/images/R.png'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ecommerce Website</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-warning text-white">Live Preview</a>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <section  class = "sec-1 container-fluid">
+            <p class = "h2 fw-bold mt-5">Newsletter</p>
+            <p>Subsribe to our newsletter to receive our latest news.</p>
+            <form class = "form" action = "/action_page.php">
+                <div class="form-group mt-2 mb-3">
+                  <input type="email" class="form-control" id="exampleInputEmail1" style = "width:250px;display: inline-block;" placeholder="Enter email" aria-describedby="emailHelp">
+                  <input type = "submit" value = "subscribe" class = "btn btn-dark" style = "display: inline-block;margin-bottom:5px;">
+                </div>
+            </form>
+        </section>
+        <div id = "contact" class = "offset container mt-5 mb-5">
+            <div class = "post-heading text-center">
+                <p class = "text1 display-4 fw-bold">Contact</p>
+                <hr class = "w-50 mx-auto">
+            </div>
+            <form class = "form w-50 mx-auto">
+                <div class="mb-3">
+                    <label for="text1" class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" id="text1" aria-describedby="emailHelp">
+    
+                </div>
+
+                <div class="mb-3">
+                  <label for="email1" class="form-label">Email address:</label>
+                  <input class = "form-control" type="email" class="form-control" id="email1" aria-describedby="emailHelp">
+                  
+                </div>
+                <div class="mb-3">
+                    <label for="message1" class="form-label">Your Messages:</label>
+                    <textarea class = "form-control"></textarea>
+                </div>
+                
+                
+                <button type="submit" class="btn btn-dark">Sent</button>
+              </form>
+        </div>
+        <div class = "container-fluid">
+            <footer class="text-center text-lg-start bg-light text-muted">
+                <!-- Section: Social media -->
+                <section
+                  class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom bg-success text-white"
+                >
+                  <!-- Left -->
+                  <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                  </div>
+                  <!-- Left -->
+              
+                  <!-- Right -->
+                  <div>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                  <!-- Right -->
+                </section>
+                <!-- Section: Social media -->
+              
+                <!-- Section: Links  -->
+                <section class="">
+                  <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                      <!-- Grid column -->
+                      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                          <i class="fas fa-gem me-3"></i>Company name
+                        </h6>
+                        <p>
+                          Here you can use rows and columns to organize your footer content. Lorem ipsum
+                          dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                      </div>
+                      <!-- Grid column -->
+              
+                      <!-- Grid column -->
+                      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                          Products
+                        </h6>
+                        <p>
+                          <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p>
+                          <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p>
+                          <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p>
+                          <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                      </div>
+                      <!-- Grid column -->
+              
+                      <!-- Grid column -->
+                      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                          Useful links
+                        </h6>
+                        <p>
+                          <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p>
+                          <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p>
+                          <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p>
+                          <a href="#!" class="text-reset">Help</a>
+                        </p>
+                      </div>
+                      <!-- Grid column -->
+              
+                      <!-- Grid column -->
+                      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                          Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p>
+                          <i class="fas fa-envelope me-3"></i>
+                          info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                      </div>
+                      <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                  </div>
+                </section>
+                <!-- Section: Links  -->
+              
+                <!-- Copyright -->
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                  © 2021 Copyright:
+                  <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                </div>
+                <!-- Copyright -->
+              </footer>
+        </div>
+
+    
+    
+</body>
+</html>
